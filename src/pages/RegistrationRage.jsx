@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProgressBar from "../components/ProgressBar";
 import StepOne from "../components/steps/StepOne";
 import StepTwo from "../components/steps/StepTwo";
@@ -19,6 +20,8 @@ const RegistrationPage = () => {
     const [errors, setErrors] = useState({});
 
     const steps = ['Шаг 1', 'Шаг 2', 'Шаг 3'];
+
+    const navigate = useNavigate();
 
     const validateStep = (currentStep) => {
         switch (currentStep) {
@@ -89,6 +92,7 @@ const RegistrationPage = () => {
             return;
         }
         console.log(formData)
+
         //     const payload = {
         //         ...formData,
         //         individualData: formData.userType === "individual" ? formData.individualData : null,

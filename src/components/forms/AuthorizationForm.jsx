@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AuthorizationForm = ({ formData, onChange, onNext }) => {
     return (
         <div className='center form' style={{marginTop: '6rem'}}>
@@ -19,7 +21,7 @@ const AuthorizationForm = ({ formData, onChange, onNext }) => {
                 />
             </div>
             <button className='button form__button' onClick={onNext}>Войти</button>
-            <p className="form__transition">Еще не зарегистрированы? <a link='#'>Зарегистрироваться</a></p>
+            <p className="form__transition">Еще не зарегистрированы? <Link to='/'>Зарегистрироваться</Link></p>
         </div>
     )
 };

@@ -15,15 +15,18 @@
     justify-content: center;
 }
 
-@mixin form-step-base {
+@mixin form-step-base($flex-diraction, $padding, $max-width) {
     @include center;
-    flex-direction: column;
+    flex-direction: $flex-diraction;
+    // flex-direction: column;
     text-align: center;
     background-color: v.$form-background-color;
-    padding: 6rem 12.5rem;
+    padding: $padding;
+    // padding: 6rem 12.5rem;
     color: v.$primary-color;
-    max-width: 47.5rem;
-    border-radius: 3.125rem;
+    max-width: $max-width;
+    // max-width: 47.5rem;
+    border-radius: v.$border-radius;
     box-shadow: 10px 8px 29.2px 0px v.$box-shadow-color;
 }
 

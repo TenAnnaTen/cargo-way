@@ -3,7 +3,7 @@
 
 .form {
 
-    @include m.form-step-base;
+    @include m.form-step-base(column, 6rem 12.5rem, 47.5rem);
 
 
     &__title {

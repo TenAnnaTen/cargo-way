@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const StepOne = ({ formData, onChange, onNext }) => {
     return (
         <div className='center form'>
@@ -57,7 +59,7 @@ const StepOne = ({ formData, onChange, onNext }) => {
                 Соглашаюсь с условиями обработки данных
             </label>
             <button className='button form__button' onClick={onNext}>Далее</button>
-            <p className="form__transition">Уже зарегистрированы? <a link='#'>Войти</a></p>
+            <p className="form__transition">Уже зарегистрированы? <Link to='/auth'>Войти</Link></p>
         </div>
     )
 };
